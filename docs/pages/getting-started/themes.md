@@ -32,7 +32,7 @@ All selectors must be scoped to the theme's class to ensure interoperability wit
 To activate a theme, import it and apply the theme's class to the `<html>` element. This example imports and activates the built-in dark theme.
 
 ```html
-<html class="mf-theme-dark">
+<html >
   <head>
     <link rel="stylesheet" href="path/to/shoelace/%NPMDIR%/themes/dark.css" />
   </head>

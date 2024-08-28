@@ -78,7 +78,7 @@
 //
 (() => {
   function getTheme() {
-    return localStorage.getItem('theme') || 'auto';
+    return localStorage.getItem('theme') || 'light';
   }
 
   function isDark() {
