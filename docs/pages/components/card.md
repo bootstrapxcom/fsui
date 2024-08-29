@@ -257,6 +257,28 @@ layout: component
   <div class="product-row">
     <mf-card class="card-overview">
       <div class="image-container">
+        <img src="https://cdn.mafrservices.com/sys-master-root/h24/h03/9533382852638/70968_main.jpg?im=Resize=1700?im=Resize=400" alt="Premium Beef Tenderloin" />
+      </div>
+      <div class="c4-content">
+        <div class="price-container">
+          <div class="price">
+            <span class="amount">2</span>
+            <div class="decimal-currency">
+              <span class="decimal">.25</span>
+              <span class="currency">AED</span>
+            </div>
+          </div>
+          <mf-button class="add-button" circle>
+            <mf-icon name="plus" style="font-size: 28px;height: 32px;"></mf-icon>
+          </mf-button>
+        </div>
+        <h3 class="product-name">Carrot</h3>
+        <p class="product-details">600g - Approx 12 pieces/Kg</p>
+      </div>
+    </mf-card>
+
+    <mf-card class="card-overview">
+      <div class="image-container">
         <img src="https://cdn.mafrservices.com/sys-master-root/he4/hec/12631674191902/489903_1.jpg?im=Resize=1700?im=Resize=400" alt="Premium Beef Tenderloin" />
       </div>
       <div class="c4-content">
@@ -388,6 +410,29 @@ layout: component
         <p class="product-details">500g - Approx 7 pieces/kg</p>
       </div>
     </mf-card>
+
+    <mf-card class="card-overview">
+      <div class="image-container">
+        <img src="https://cdn.mafrservices.com/sys-master-root/h2f/hfc/15843619307550/446052_main.jpg?im=Resize=1700?im=Resize=400" alt="Premium Wagyu Beef Steak" />
+      </div>
+      <div class="c4-content">
+        <div class="price-container">
+          <div class="price">
+            <span class="amount">4</span>
+            <div class="decimal-currency">
+              <span class="decimal">.48</span>
+              <span class="currency">AED</span>
+            </div>
+          </div>
+          <mf-button class="add-button" circle>
+            <mf-icon name="plus" style="font-size: 28px;height: 32px;"></mf-icon>
+          </mf-button>
+        </div>
+        <h3 class="product-name">Pink Lady Apple</h3>
+        <p class="product-details">500g - Approx 6 pieces/kg</p>
+      </div>
+    </mf-card>
+
   </div>
 </div>
 
@@ -419,8 +464,10 @@ layout: component
   .c4-style .image-container img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     object-position: center;
+    padding: 0 11px;
+    background: #fff;
   }
 
   .c4-style .c4-content {
@@ -476,6 +523,9 @@ layout: component
     color: #666;
     margin: 2px 0 0 0;
     line-height: 1.2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .c4-style mf-button.add-button::part(base) {
