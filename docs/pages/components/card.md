@@ -758,43 +758,8 @@ layout: component
           <span>Add to Bag</span> 
         </mf-button>
     </mf-card>
-
-    <mf-card class="card-overview">
-      <div class="image-container">
-        <img
-          slot="image"
-          src="https://api.lego.me/medias/-original-42173-1.jpg-convert-900x600?context=bWFzdGVyfGF6dXJlaW1hZ2VzfDU3NDg1fGltYWdlL2pwZWd8YUdNd0wyZ3haQzh4TVRVM05qazFOamcwTmpFeE1DOHZiM0pwWjJsdVlXd3ZOREl4TnpOZk1TNXFjR2RmWTI5dWRtVnlkQzA1TURCNE5qQXd8NjQ0ZmMyYjQ0MTRlYWZmYTM0MTI3MDBiYWVhNGM1NDFjMjZkN2JmZWVmMjE2MTIwYmE2MjkwOWFmM2VmMTRjMA"
-          alt="LEGO Izzie's Dream Animals"
-        />
-        <div class="heart-icon"><mf-icon name="heart"></mf-icon></div>
-      </div>
-
-      <h3 class="product-name">LEGO® Koenigsegg Jesko Grey</h3>
-      <p class="product-price">AED 239</p>
-        <mf-button class="add-to-bag" pill>
-          <mf-icon src="/assets/images/minicart-icon.svg" class="bag-icon"></mf-icon>
-          <span>Add to Bag</span> 
-        </mf-button>
-    </mf-card>
   </div>
    <div class="product-row">
-    <mf-card class="card-overview">
-      <div class="image-container">
-        <img
-          slot="image"
-          src="https://api.lego.me/medias/-original-75389-1.jpg-convert-900x600?context=bWFzdGVyfGF6dXJlaW1hZ2VzfDc3MDQyfGltYWdlL2pwZWd8YURnekwyZzBPQzh4TVRVM056QTBOVEU0T0RZek9DOHZiM0pwWjJsdVlXd3ZOelV6T0RsZk1TNXFjR2RmWTI5dWRtVnlkQzA1TURCNE5qQXd8YzlmOGQ1M2Y5NWNhZjFkYTUzYTRiYzdhZjE2ODNiOTc2ZDJjNDVkMDc2YjBmOGE0MWZhMTllNGExZjk3N2YyYg"
-          alt="LEGO Castle Nocturnia"
-        />
-        <div class="heart-icon"><mf-icon name="heart"></mf-icon></div>
-      </div>
-
-      <h3 class="product-name">LEGO® The Dark Falcon</h3>
-      <p class="product-price">AED 699</p>
-        <mf-button class="add-to-bag" pill>
-          <mf-icon src="/assets/images/minicart-icon.svg" class="bag-icon"></mf-icon>
-          <span>Add to Bag</span> 
-        </mf-button>
-    </mf-card>
 
     <mf-card class="card-overview">
       <div class="image-container">
@@ -847,7 +812,7 @@ layout: component
   }
 
   .lego-style .card-overview {
-    max-width: 33.33%;
+    max-width: 100%;
     border-right: 1px solid #e0e0e0;
     border-bottom: 1px solid #e0e0e0;
     box-sizing: border-box;
@@ -866,7 +831,7 @@ layout: component
   }
 
   .lego-style .card-overview {
-    max-width: 33.33%;
+    max-width: 100%;
   }
 
   .lego-style .heart-icon {
