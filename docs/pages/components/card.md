@@ -318,9 +318,9 @@ layout: component
       <div class="c4-content">
         <div class="price-container">
           <div class="price">
-            <span class="amount">2</span>
+            <span class="amount">11</span>
             <div class="decimal-currency">
-              <span class="decimal">.25</span>
+              <span class="decimal">.75</span>
               <span class="currency">AED</span>
             </div>
           </div>
@@ -328,6 +328,10 @@ layout: component
             <mf-icon name="plus" style="font-size: 28px;height: 32px;"></mf-icon>
           </mf-button>
         </div>
+        <span class="discount-price">
+          <span class="current-price">AED14.95</span>
+          <span class="off-perc">21% OFF</span>
+        </span>
         <h3 class="product-name">Carrot</h3>
         <p class="product-details">600g - Approx 12 pieces/Kg</p>
       </div>
@@ -362,9 +366,9 @@ layout: component
       <div class="c4-content">
         <div class="price-container">
           <div class="price">
-            <span class="amount">13</span>
+            <span class="amount">11</span>
             <div class="decimal-currency">
-              <span class="decimal">.70</span>
+              <span class="decimal">.75</span>
               <span class="currency">AED</span>
             </div>
           </div>
@@ -372,6 +376,10 @@ layout: component
             <mf-icon name="plus" style="font-size: 28px;height: 32px;"></mf-icon>
           </mf-button>
         </div>
+        <span class="discount-price">
+          <span class="current-price">AED14.95</span>
+          <span class="off-perc">21% OFF</span>
+        </span>
         <h3 class="product-name">Clementine with Leaves</h3>
         <p class="product-details">500g - Approx 12 pieces/Kg</p>
       </div>
@@ -430,9 +438,9 @@ layout: component
       <div class="c4-content">
         <div class="price-container">
           <div class="price">
-            <span class="amount">2</span>
+            <span class="amount">22</span>
             <div class="decimal-currency">
-              <span class="decimal">.48</span>
+              <span class="decimal">.75</span>
               <span class="currency">AED</span>
             </div>
           </div>
@@ -440,6 +448,10 @@ layout: component
             <mf-icon name="plus" style="font-size: 28px;height: 32px;"></mf-icon>
           </mf-button>
         </div>
+        <span class="discount-price">
+          <span class="current-price">AED11.30</span>
+          <span class="off-perc">51% OFF</span>
+        </span>
         <h3 class="product-name">Lemon</h3>
         <p class="product-details">500g - Approx 8 pieces/kg</p>
       </div>
@@ -503,6 +515,7 @@ layout: component
 
   .c4-style .card-overview {
     max-width: 33.33%;
+    position: relative;
   }
 
   .c4-style .card-overview {
@@ -544,6 +557,22 @@ layout: component
     line-height: 1;
   }
 
+  .c4-style .discount-price {
+    font-size: 10px;
+    position: absolute;
+    top: 65.9%;
+    font-weight: 200;
+  }
+
+.c4-style span.current-price {
+    text-decoration: line-through;
+    color: rgb(104, 104, 104);
+}
+
+.c4-style span.off-perc {
+  color: rgb(238, 37, 39);
+}
+
   .c4-style .price .amount {
     font-size: 20px;
     line-height: 0.9;
@@ -570,7 +599,7 @@ layout: component
   .c4-style .product-name {
     font-size: 14px;
     font-weight: 400;
-    margin: 0;
+    margin: 15px 0 0 0;
     line-height: 1.2;
   }
 
