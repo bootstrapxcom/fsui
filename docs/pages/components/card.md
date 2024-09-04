@@ -457,13 +457,13 @@ layout: component
   }
 
   .c4-style .image-container {
-    aspect-ratio: 1 / 1;
-    background-color: #f0f0f0;
+    aspect-ratio: unset;
+    background-color: #fff;
   }
 
   .c4-style .image-container img {
     width: 100%;
-    height: 100%;
+    height: 87%;
     object-fit: contain;
     object-position: center;
     padding: 0 11px;
@@ -471,7 +471,7 @@ layout: component
   }
 
   .c4-style .c4-content {
-    padding: 12px 12px 65px 12px;
+    padding: 12px 12px 50px 12px;
   }
 
   .c4-style .price-container {
