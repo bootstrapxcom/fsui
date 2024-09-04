@@ -803,26 +803,34 @@ layout: component
 
   .lego-style .product-row {
     gap: 0;
+    justify-content: center;
   }
 
   .lego-style.product-grid {
     gap: 0;
-    border: 1px solid #e0e0e0;
     overflow: hidden;
   }
 
   .lego-style .card-overview {
-    max-width: 100%;
+    border: 1px solid #e0e0e0;
+  }
+
+  .lego-style .image-container {
+    aspect-ratio: 4 / 4;
+  }
+
+  .lego-style .card-overview {
+    max-width: 44%;
     border-right: 1px solid #e0e0e0;
     border-bottom: 1px solid #e0e0e0;
     box-sizing: border-box;
   }
 
   .lego-style .card-overview:last-child {
-    border-right: none;
+    border-left: none;
   }
 
-  .lego-style .product-row:last-child .card-overview {
+  .lego-style .product-row:first-child .card-overview {
     border-bottom: none;
   }
 
@@ -831,7 +839,7 @@ layout: component
   }
 
   .lego-style .card-overview {
-    max-width: 100%;
+    max-width: 44%;
   }
 
   .lego-style .heart-icon {
