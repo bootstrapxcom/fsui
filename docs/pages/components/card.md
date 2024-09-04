@@ -19,6 +19,9 @@ layout: component
       src="https://dw4gwhhv7uqc1.cloudfront.net/catalog%2FSeller_36472%2F66b9655372450.jpg"
       alt="Men Basic Joggers With Side Pockets"
     />
+      <div class="badges">
+        <mf-badge class="sale-badge"><span class="sale">Sale</span></mf-badge>
+      </div>
     <div class="heart-icon-container">
       <mf-icon src="/assets/images/heart.svg" class="heart-icon"></mf-icon>
     </div>
@@ -27,7 +30,7 @@ layout: component
   <div class="product-info">
     <span class="brand">Carter & White</span><br>
     <span class="product-name">Men Masha Round Neck Pima Cotton Tshirt</span><br>
-    <span class="price">AED 675.00</span>
+    <span class="price"><span class="new-price">AED 1,020.00</span> <span class="old-price">AED 2,550.00</span></span>
   </div>
 </mf-card>
 
@@ -117,6 +120,9 @@ layout: component
           src="https://dw4gwhhv7uqc1.cloudfront.net/catalog%2FSeller_39401%2F6666a9eab98ea.jpg"
           alt="Casual Sneakers"
         />
+      <div class="badges">
+        <mf-badge class="low-stock-badge"><span class="stock">low in stock</span></mf-badge>
+      </div>
         <div class="heart-icon-container">
           <mf-icon src="/assets/images/heart.svg" class="heart-icon"></mf-icon>
         </div>
@@ -161,7 +167,16 @@ layout: component
 
   .moe-style .product-info .price {
     font-size: 14px;
-    color: #333;
+    color: rgb(51, 51, 51);
+    font-weight:500;
+  }
+
+  .moe-style .price .new-price {
+    color: #e31e26;
+  }
+
+ .moe-style .price .old-price {
+    text-decoration: line-through;
   }
 
   .product-row {
@@ -170,11 +185,29 @@ layout: component
     gap: 30px;
   }
 
+  .moe-style .product-row {
+    gap: 15px;
+  }
+
   .card-overview {
     flex: 1;
     max-width: calc(33.333% - 20px);
     display: flex;
     flex-direction: column;
+  }
+
+  .moe-style .card-overview {
+    max-width: 33.333%;
+  }
+
+  .card-overview:hover {
+    cursor: pointer;
+  }
+
+  .moe-style .card-overview:hover .view-details {
+    opacity: 1;
+    visibility: visible;
+    cursor: pointer;
   }
 
   .moe-style .image-container {
@@ -211,25 +244,48 @@ layout: component
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(255, 255, 255, 0.9);
-    color: black;
+    background-color: #fff;
+    color: #333;
+    font-size:14px;
     text-align: center;
-    padding: 10px;
+    padding:20px 10px;
     font-weight: 500;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
   }
 
-  .image-container:hover .view-details {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  .badge {
+  .badges {
     position: absolute;
     top: 0;
     left: 0;
+  }
+
+  .moe-style .badges {
+    top:15px;
+    left: 15px;
+  }
+
+  .moe-style .badges mf-badge::part(base) {
+    border:none;
+    border-radius: 1px;
+    padding: 9px 8px;
+  }
+
+  .moe-style .badges mf-badge.sale-badge::part(base) {
+    background:#e31e26;
+  }
+
+  .moe-style .badges mf-badge.low-stock-badge::part(base) {
+    background:#ffa845;
+  }
+
+  .moe-style .badges .sale,
+  .moe-style .badges .stock {
+      text-transform: uppercase;
+      font-weight: bold;
+      border: none;
+      font-size: 11px;
   }
 
   @media (max-width: 1024px) {
@@ -570,6 +626,9 @@ layout: component
           src="https://api-prod.thatconceptstore.com/medias/-original-6198434-ONRU-All-White-1.webp-convert-600x800?context=bWFzdGVyfGF6dXJlaW1hZ2VzfDE0MjA0fGltYWdlL3dlYnB8YURobEwyZ3pOaTh4TVRRMU5qUXhOREk0TlRnMU5DOHZiM0pwWjJsdVlXd3ZOakU1T0RRek5GOVBUbEpWWDBGc2JDQlhhR2wwWlY4eExuZGxZbkJmWTI5dWRtVnlkQzAyTURCNE9EQXd8ZWM1YjdjMzA2M2Q0Mjc5YmI0NTMzNGZlODI0YjhlZjEwZWM4MDdjZmM4NWU2Yzc0ZGE5YjVlYzdmNzlkODE5Mw"
           alt="LEGO Cooper's Robot Dinosaur C-Rex"
         />
+        <div class="badges">
+        <mf-badge class="new-badge"><span class="new">new season</span></mf-badge>
+      </div>
         <div class="heart-icon"><mf-icon name="heart"></mf-icon></div>
       </div>
 
@@ -606,10 +665,6 @@ layout: component
           alt="LEGO Castle Nocturnia"
         />
         <div class="heart-icon"><mf-icon name="heart"></mf-icon></div>
-        <div class="badges">
-          <mf-badge variant="warning">Exclusive</mf-badge>
-          <mf-badge variant="success">New</mf-badge>
-        </div>
       </div>
 
       <div class="product-info">
@@ -698,6 +753,29 @@ layout: component
     font-weight: 700;
   }
 
+  .that-style .badges {
+    bottom: 3px;
+    left: 0;
+    right: 0;
+    top: auto;
+    text-align: center;
+  }
+
+  .that-style .badges mf-badge::part(base) {
+    border:none;
+    border-radius: 0;
+    padding: 7px 9px;
+  }
+
+  .that-style .badges mf-badge.new-badge::part(base) {
+    background: black;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: -0.5px;
+    font-weight: 700;
+  }
+
+
   .that-style .product-name {
     display: block;
     font-size: 14px;
@@ -731,6 +809,9 @@ layout: component
           src="https://api.lego.me/medias/-original-75398-1.jpg-convert-900x600?context=bWFzdGVyfGF6dXJlaW1hZ2VzfDM0NjY2fGltYWdlL2pwZWd8YURoaEwyaGlOQzh4TVRVM056QTJNalExTnpNM05DOHZiM0pwWjJsdVlXd3ZOelV6T1RoZk1TNXFjR2RmWTI5dWRtVnlkQzA1TURCNE5qQXd8NmYxM2M4YWQzYzMxMDFhMThmN2E0MjgwYThhMTZjMTBiNWNhNzI1NjhhYjkxNDk5NmI2NjkwODkzMjI2MWViMQ"
           alt="LEGO Castle Nocturnia"
         />
+        <div class="badges">
+          <mf-badge class="best-badge"><span class="best">New</span></mf-badge>
+        </div>
         <div class="heart-icon"><mf-icon name="heart"></mf-icon></div>
       </div>
       <h3 class="product-name">LEGO® C-3PO™</h3>
@@ -748,6 +829,10 @@ layout: component
           src="https://api.lego.me/medias/-original-43247-1.jpg-convert-900x600?context=bWFzdGVyfGF6dXJlaW1hZ2VzfDQwNzAwfGltYWdlL2pwZWd8YUdKbUwyZzFOUzh4TVRReU5ESTVPRFEyTnpNMU9DOHZiM0pwWjJsdVlXd3ZORE15TkRkZk1TNXFjR2RmWTI5dWRtVnlkQzA1TURCNE5qQXd8NjljZjA2ZGY5MDg0NWM3MmViMDg1MzExMDRkOGVjOGY1ZjY4OTA2Nzk3ZjRmZmYxMGQ3YTI3NmZmOWUyYzFkMw"
           alt="LEGO Cooper's Robot Dinosaur C-Rex"
         />
+        <div class="badges">
+        <mf-badge class="best-badge"><span class="best">BESTSELLER</span></mf-badge>
+        <mf-badge class="best-badge"><span class="best">New</span></mf-badge>
+        </div>
         <div class="heart-icon"><mf-icon name="heart"></mf-icon></div>
       </div>
 
@@ -768,6 +853,9 @@ layout: component
           src="https://api.lego.me/medias/-original-42184-1.jpg-convert-900x600?context=bWFzdGVyfGF6dXJlaW1hZ2VzfDY1MDEzfGltYWdlL2pwZWd8YURkbEwyaGtPQzh4TVRVM05qazRNalEzTURZNE5pOHZiM0pwWjJsdVlXd3ZOREl4T0RSZk1TNXFjR2RmWTI5dWRtVnlkQzA1TURCNE5qQXd8ZDZmZDE3MmU4MDI4YjU2MzM4ZjU0YjU2YTQzNjBiOWU3YzJkNjBmZTJhODc4Y2I2NjFmN2JjMmExNDQ4YmRkNA"
           alt="LEGO Cooper's Robot Dinosaur C-Rex"
         />
+        <div class="badges">
+        <mf-badge class="best-badge"><span class="best">BESTSELLER</span></mf-badge>
+      </div>
         <div class="heart-icon"><mf-icon name="heart"></mf-icon></div>
       </div>
 
@@ -786,6 +874,9 @@ layout: component
           src="https://api.lego.me/medias/-original-76923-1.jpg-convert-900x600?context=bWFzdGVyfGF6dXJlaW1hZ2VzfDcwMzE1fGltYWdlL2pwZWd8YURkbEwyZzFaQzh4TVRReU5EVXlNak16T0RNek5DOHZiM0pwWjJsdVlXd3ZOelk1TWpOZk1TNXFjR2RmWTI5dWRtVnlkQzA1TURCNE5qQXd8ZjQyMGY1ZTA4NzU5NmRiNGQ5NzY4ODMwYTFkNDY4NWNiNDY3MzY5YmQyODdlNGFkMDAyNzlhZTgyYjJhNWZkYw"
           alt="LEGO Izzie's Dream Animals"
         />
+      <div class="badges">
+        <mf-badge class="best-badge"><span class="best">New</span></mf-badge>
+      </div>
         <div class="heart-icon"><mf-icon name="heart"></mf-icon></div>
       </div>
 
@@ -837,6 +928,28 @@ layout: component
   .lego-style.product-grid {
     gap: 0;
   }
+
+  .lego-style .badges {
+      right: 15px;
+      left: 15px;
+      top: 8px;
+      text-align: right;
+  }
+
+  .lego-style .badges mf-badge::part(base) {
+    border:none;
+    border-radius: 0;
+    padding: 5px 8px;
+  }
+
+.lego-style .badges mf-badge.best-badge::part(base) {
+    background: #f2f2f2;
+    font-size: 10px;
+    letter-spacing: -0.5px;
+    font-weight: 700;
+    color: #000;
+    border-left: 2px solid #EEC65D;
+}
 
   .lego-style .card-overview {
     max-width: 44%;
@@ -898,6 +1011,17 @@ layout: component
     width: 146px;
     height:44px;
     padding: 3px;
+    border: 1px solid transparent;
+        transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out, border-color 0.5s ease-in-out;
+  }
+
+  .lego-style .heart-icon mf-icon {
+    color: #006db8;
+  }
+
+  .lego-style mf-button.add-to-bag::part(base):hover {
+    background: transparent;
+    border: 1px solid #FD8023;
   }
   
   .add-to-bag * {
