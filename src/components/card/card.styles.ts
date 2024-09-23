@@ -13,7 +13,10 @@ export default css`
   .card {
     display: flex;
     flex-direction: column;
-    background-color: var(--mf-panel-background-color);
+    background-color: var(--sl-panel-background-color);
+    box-shadow: var(--sl-shadow-x-small);
+    border: solid var(--border-width) var(--border-color);
+    border-radius: var(--border-radius);
   }
 
   .card__image {
@@ -50,6 +53,7 @@ export default css`
 
   .card__body {
     display: block;
+    padding: var(--padding);
   }
 
   .card--has-footer .card__footer {
